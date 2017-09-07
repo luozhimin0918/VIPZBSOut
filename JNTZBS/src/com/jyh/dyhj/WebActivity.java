@@ -135,8 +135,10 @@ public class WebActivity extends Activity {
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				// TODO Auto-generated method stub
 				// Log.i("kefu", "shouldOverrideUrlLoading" + url);
-				isGoBack=true;
-				self_out_img.setVisibility(View.VISIBLE);
+				if(!isKF){
+					isGoBack=true;
+					self_out_img.setVisibility(View.VISIBLE);
+				}
 				return super.shouldOverrideUrlLoading(view, url);
 			}
 
