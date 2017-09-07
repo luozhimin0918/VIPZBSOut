@@ -85,9 +85,11 @@ public class Fragment_kefu extends Fragment {
             public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
                 if (url.startsWith("http") || url.startsWith("https")) {
                     return super.shouldInterceptRequest(view, url);
-                } else {
+                } else if(packageInfo!=null) {
                     Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(in);
+                    return null;
+                }else{
                     return null;
                 }
             }
@@ -126,11 +128,10 @@ public class Fragment_kefu extends Fragment {
             e.printStackTrace();
         }
     }
-
+    PackageInfo packageInfo;
     class isQQ {
         @JavascriptInterface
         public boolean isAppInstalled() {
-            PackageInfo packageInfo;
             try {
                 packageInfo = getActivity().getPackageManager().getPackageInfo("com.tencent.mobileqq", 0);
             } catch (Exception e) {

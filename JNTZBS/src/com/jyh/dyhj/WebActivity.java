@@ -185,7 +185,7 @@ public class WebActivity extends Activity {
 			}
 		});
 
-		webView.setOnLongClickListener(new View.OnLongClickListener() {
+		/*webView.setOnLongClickListener(new View.OnLongClickListener() {
 
 			public boolean onLongClick(View v) {
 				WebView.HitTestResult result = ((WebView) v).getHitTestResult();
@@ -200,7 +200,7 @@ public class WebActivity extends Activity {
 				}
 				return false;
 			}
-		});
+		});*/
 
 		webView.loadUrl(url);
 
