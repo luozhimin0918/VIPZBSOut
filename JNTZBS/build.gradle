@@ -49,10 +49,10 @@ android {
 //    }
     signingConfigs {
         config {
-            keyAlias 'byzb'
-            keyPassword 'byzbjks'
-            storeFile file('./keystore/byzb.jks')
-            storePassword 'byzbjks'
+            keyAlias 'vipzb'
+            keyPassword 'vipzbjks'
+            storeFile file('./keystore/vipzb.jks')
+            storePassword 'vipzbjks'
         }
     }
 
